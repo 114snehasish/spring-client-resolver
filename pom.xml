@@ -8,7 +8,7 @@
         <version>2.7.8</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.spring-client-resolver</groupId>
+    <groupId>com.github.spring-client-resolver</groupId>
     <artifactId>spring-client-resolver</artifactId>
     <version>1.0.0-RELEASE</version>
     <name>spring-client-resolver</name>
