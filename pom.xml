@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.spring-client-resolver</groupId>
     <artifactId>spring-client-resolver</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-RELEASE</version>
     <name>spring-client-resolver</name>
     <description>spring-client-resolver</description>
     <properties>
