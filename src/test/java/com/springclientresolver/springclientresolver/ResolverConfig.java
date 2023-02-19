@@ -1,4 +1,4 @@
-package com.springclientresolver.springclientresolver.config;
+package com.springclientresolver.springclientresolver;
 
 import com.springclientresolver.springclientresolver.service.ClientInfoAttributeResolver;
 import org.springframework.context.annotation.Configuration;
