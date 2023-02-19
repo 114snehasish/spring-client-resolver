@@ -1,7 +1,6 @@
 package com.springclientresolver.springclientresolver.service;
 
 import com.springclientresolver.springclientresolver.models.ClientInfo;
-import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import ua_parser.Client;
 import ua_parser.Parser;
@@ -9,10 +8,12 @@ import ua_parser.Parser;
 /**
  * Default implementation of {@link ClientResolverService} that uses {@link Parser} to process incoming User Agent String.
  */
-@Service
 public class UaParserClientResolverService implements ClientResolverService {
     Parser uaParser;
 
+    /**
+     * Default Constructor which uses {@link Parser}
+     */
     public UaParserClientResolverService() {
         uaParser = new Parser();
     }
