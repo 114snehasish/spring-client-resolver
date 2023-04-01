@@ -7,9 +7,12 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Check Java version
-        run: java -version
       - name: Build
         run: ./mvnw clean package
