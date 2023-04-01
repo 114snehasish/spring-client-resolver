@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -name: Test
-      -run: |
+      run: |
         echo "Testing Github Action..."
