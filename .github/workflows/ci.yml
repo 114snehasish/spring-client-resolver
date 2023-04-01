@@ -1,0 +1,12 @@
+name: CI
+on:
+  push:
+    branch:
+      - main
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Test
+      -run: |
+        echo "Testing Github Action..."
