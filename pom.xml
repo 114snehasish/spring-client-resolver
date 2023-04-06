@@ -8,11 +8,34 @@
         <version>2.7.8</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.github.spring-client-resolver</groupId>
+    <groupId>com.github.snehasish</groupId>
     <artifactId>spring-client-resolver</artifactId>
-    <version>1.0.0-RELEASE</version>
-    <name>spring-client-resolver</name>
+    <version>1.0.0</version>
+    <name>${project.groupId}:${project.artifactId}</name>
     <description>spring-client-resolver</description>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Snehasish Chakraborty</name>
+            <email>contact@snehasish-chakraborty.com</email>
+            <organization>Snehasish Chakraborty</organization>
+            <organizationUrl>https://www.snehasish-chakraborty.com</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/114snehasish/spring-client-resolver.git</connection>
+        <developerConnection>scm:git:ssh://github.com/114snehasish/spring-client-resolver.git</developerConnection>
+        <url>https://github.com/114snehasish/spring-client-resolver</url>
+    </scm>
+
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -72,5 +95,33 @@
             </plugin>
         </plugins>
     </build>
-
+    <profiles>
+        <profile>
+            <id>ci-cd</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
